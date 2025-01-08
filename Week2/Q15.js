@@ -9,3 +9,9 @@ function createProfile(obj, arr) {
     secondaryIntrest: int2,
   });
 }
+
+let obj = { name: "Sai Charan", age: 20, id: "220" };
+
+let arr = ["dev", "ui/ux", "blockchain"];
+
+console.log(createProfile(obj, arr));
