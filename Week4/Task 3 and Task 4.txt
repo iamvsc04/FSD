@@ -1,0 +1,17 @@
+task 3
+
+-> 1) working with higher order function in js
+-> 2) using callback and creating a callback hell situation to understand the drawbacks
+-> 3) working with XHR:response
+-> 4) Dealing with the call back hell situation using promise , exploring the differnet ways of creating and using promise in executing the 
+		asynchronous task
+-> 5) Dealing with promise chaining and async/await
+
+
+Task 4)
+-> 1) use fetch function to access remote data using the given api and display the data in the form of a table .
+-> 2) use fetch function to read the weather details from openweathermap.org and display the details like city, min-temp, max-temp, 
+		humidity on the webpage for a given city
+-> 3) from the same website read the weather forecast details for a given city and display the details like date - temperature in a table
+
+-> 4) plot a bar chart for the above implementation using date and temperature along x and y axis respectively use chartjs library
