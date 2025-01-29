@@ -13,5 +13,4 @@ Task 4)
 -> 2) use fetch function to read the weather details from openweathermap.org and display the details like city, min-temp, max-temp, 
 		humidity on the webpage for a given city
 -> 3) from the same website read the weather forecast details for a given city and display the details like date - temperature in a table
-
 -> 4) plot a bar chart for the above implementation using date and temperature along x and y axis respectively use chartjs library

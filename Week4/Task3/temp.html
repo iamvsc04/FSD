@@ -1,0 +1,27 @@
+<html>
+
+<body>
+    <h1>weather today</h1>
+    <button onclick="fetchWeather()">get weather</button>
+    <div id="weather"></div>
+
+
+</body>
+<script>
+    const key = 'mykey';
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=London&appid=ec9c3f61099329cdb566a83771aa3943`;
+    function fetchWeather() {
+        fetch(url).then(response =>{
+            response.json()
+             .then(data => {
+                // console.log(data);
+                console.log( `city:data.name}, temperatuere data.main.temp}K, Humidity:data.main.humidity}%, wind speed:data.wind.speed}`);
+                 document.getElementById('weather').innerHtml = "<p>city:"+data.name+" temperatuere "+data.main.temp+" K, Humidity:"+data.main.humidity+"  wind speed:" +data.main.windSpeed+
+                    " </p>";
+            })
+        })
+           
+    }
+</script>
+
+</html>
