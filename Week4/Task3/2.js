@@ -1,36 +1,35 @@
 function main(callback) {
-  callback();
   setTimeout(() => {
     console.log("in main1");
+    callback();
   }, 1000);
 }
 
 function main2(callback) {
-  if (a != b) throw ErrorEvent;
-  else {
-    setTimeout(() => {
+  setTimeout(() => {
+    try {
+      let a = 5,
+        b = 10;
+      if (a !== b) throw new Error("Values do not match in main2");
       console.log("in main2");
-    }, 600);
-    callback();
-  }
+      callback();
+    } catch (error) {
+      console.log("Error raised in main2 function:", error.message);
+    }
+  }, 600);
 }
 
-function main3() {
+function main3(callback) {
   setTimeout(() => {
     console.log("in main3");
+    callback();
   }, 500);
 }
 
 main(() => {
-  try {
-    main2(() => {
-      try {
-        main3();
-      } catch {
-        console.log("Error raised in main 3 fucntion");
-      }
+  main2(() => {
+    main3(() => {
+      console.log("Final execution done!");
     });
-  } catch {
-    console.log("error raised in main 2 function");
-  }
+  });
 });
